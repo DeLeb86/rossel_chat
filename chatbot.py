@@ -3,9 +3,13 @@ import re
 import os
 from config import *
 import streamlit as st
-pre_prompt=open(prompt_path).read()
+def local_css(file_name):
+    with open(file_name) as f:
+        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
+local_css("style.css")
 print(st.secrets.keys())
+pre_prompt=open(prompt_path).read()
 x=st.secrets["key"]
 st.title("News Buddy")
 client = OpenAI(api_key=x)

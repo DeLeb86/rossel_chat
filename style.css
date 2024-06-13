@@ -1,0 +1,18 @@
+/* style.css */
+
+/* Adjust font size for mobile */
+body {
+    font-size: 16px;
+}
+
+/* Ensure containers are mobile-friendly */
+.stApp {
+    padding: 1rem;
+}
+
+/* Adjust column widths on small screens */
+@media only screen and (max-width: 600px) {
+    .css-1lcbmhc {
+        flex-direction: column;
+    }
+}
