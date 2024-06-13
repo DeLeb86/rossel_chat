@@ -8,7 +8,7 @@ pre_prompt=open(prompt_path).read()
 
 
 st.title("News Buddy")
-client = OpenAI(api_key=os.getenv("OPEN_API_KEY")
+client = OpenAI(api_key=os.getenv("OPEN_API_KEY"))
 st.session_state["model"]=model
 # Initialize chat history
 if "messages" not in st.session_state:
