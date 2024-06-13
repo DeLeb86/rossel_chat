@@ -1,5 +1,6 @@
 from openai import OpenAI
 import re
+import os
 from config import *
 import streamlit as st
 pre_prompt=open(prompt_path).read()
@@ -7,7 +8,7 @@ pre_prompt=open(prompt_path).read()
 
 
 st.title("News Buddy")
-client = OpenAI(api_key=api_key)
+client = OpenAI(api_key=os.getenv("OPEN_API_KEY")
 st.session_state["model"]=model
 # Initialize chat history
 if "messages" not in st.session_state:
