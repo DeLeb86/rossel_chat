@@ -5,10 +5,10 @@ from config import *
 import streamlit as st
 pre_prompt=open(prompt_path).read()
 
-print(os.getenv("API_KEY"))
+print(st.secrets["API_KEY"])
 
 st.title("News Buddy")
-client = OpenAI(os.getenv("API_KEY"))
+client = OpenAI(st.secrets["API_KEY"])
 st.session_state["model"]=model
 # Initialize chat history
 if "messages" not in st.session_state:
