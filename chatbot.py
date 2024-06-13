@@ -6,7 +6,7 @@ import streamlit as st
 pre_prompt=open(prompt_path).read()
 
 print(st.secrets.keys())
-x=st.secrets["API_KEY"]
+x=st.secrets["key"]
 st.title("News Buddy")
 client = OpenAI(api_key=x)
 st.session_state["model"]=model
